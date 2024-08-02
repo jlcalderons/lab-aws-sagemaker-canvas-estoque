@@ -4,32 +4,52 @@
 
 ## 🎯 Objetivos Deste Desafio de Projeto (Lab)
 
-<img src="/Images/ModelStatus.png" alt="Resultado Canvas - anâlise arquivo do dataset">
+
 
 ## 🚀 Passo a Passo
 
 ### 1. Selecionar Dataset
 
--   Navegue até a pasta `datasets` deste repositório. Esta pasta contém os datasets que você poderá escolher para treinar e testar seu modelo de ML. Sinta-se à vontade para gerar/enriquecer seus próprios datasets, quanto mais você se engajar, mais relevante esse projeto será em seu portfólio.
--   Escolha o dataset que você usará para treinar seu modelo de previsão de estoque.
--   Faça o upload do dataset no SageMaker Canvas.
+-   Se carregó o arquivo 'dataset-1000-com-preco-promocional-e-renovacao-estoque.csv' da pasta 'datasets' deste repositório. Para treinar e testar o modelo de previsão de estoque de ML.
 
 ### 2. Construir/Treinar
 
--   No SageMaker Canvas, importe o dataset que você selecionou.
--   Configure as variáveis de entrada e saída de acordo com os dados.
--   Inicie o treinamento do modelo. Isso pode levar algum tempo, dependendo do tamanho do dataset.
+-   No SageMaker Canvas, se fez a importação do dataset selecionado.
+-   Configurando as variáveis de entrada e saída de acordo com os dados.
+-   Se iniciou o treinamento do modelo. Apresentando o seguinte resultado:
+  
+    <img src="/Images/ModelStatus.png" alt="Resultado Canvas - anâlise arquivo do dataset">
 
 ### 3. Analisar
 
--   Após o treinamento, examine as métricas de performance do modelo.
--   Verifique as principais características que influenciam as previsões.
--   Faça ajustes no modelo se necessário e re-treine até obter um desempenho satisfatório.
+-   As métricas de performance do modelo preditor da amazon, para o dataset escolhido, foram:
+    
+        Promedio Weighted Quantile Loss (Avg. wQL) = 0.138
+        Mean Absolute Percentage Error (MAPE) = 0.212
+        Weighted Absolute Percentage Error (WAPE) = 0.187
+        Root Mean Square Error (RMSE) = 20.364
+        Mean Absolute Scaled Error (MASE) = 0.000
+
+    Sendo as datas dos feriados no Brasil a coluna de aumento da precisão no modelo preditor com o 82.88% e
+    as colunas de preço e promoções as que diminuem com 9.78% e 7.34%.
+    Este relatório contém análise de modelo para o candidato Canvas1721864095976-trial-me. O modelo usado é
+    um modelo de previsão de séries temporais treinado cujo objetivo é minimizar a métrica de qualidade
+    "Perda de quantil ponderada média".
 
 ### 4. Prever
 
--   Use o modelo treinado para fazer previsões de estoque.
--   Exporte os resultados e analise as previsões geradas.
--   Documente suas conclusões e qualquer insight obtido a partir das previsões.
+-   O modelo treinado para fazer previsões de estoque por 9 días do produto "1000" é o seguinte:
+    <img src="/Images/single_prediction_9.png" alt="Resultado Canvas - anâlise produto 1000 do dataset para 9 dias">
+-   O modelo treinado para fazer previsões de estoque por 1 día do produto "1000" é o seguinte:
+    <img src="/Images/single_prediction_1.png" alt="Resultado Canvas - anâlise produto 1000 do dataset">
+    
+A conclusão individual para o produto "1000" indica que na previsão de 9 días o preditor se asemelha mais ao comportamento real de estoque do produto.
+
+<img src="/Images/DadosProduto1000.png" alt="Comportamento Produto 1000">
+
+
+
+
+
 
 
